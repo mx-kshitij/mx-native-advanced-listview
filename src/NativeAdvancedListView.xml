@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.nativeadvancedlistview.NativeAdvancedListView" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Native Advanced List View</name>
+    <description>Native advanced list view</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Data">
+            <property key="data" type="datasource" isList="true" required="true">
+                <caption>Data source</caption>
+                <description />
+            </property>
+            <property key="content" type="widgets" required="false" dataSource="data">
+                <caption>Item content</caption>
+                <description>
+                </description>
+            </property>
+            <property key="isInverted" type="boolean" defaultValue="false">
+                <caption>Inverted</caption>
+                <description />
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Scroll to button">
+            <property key="scrollToBtn" type="enumeration" defaultValue="none">
+                <caption>Scroll to button</caption>
+                <description></description>
+                <enumerationValues>
+                    <enumerationValue key="none">None</enumerationValue>
+                    <enumerationValue key="top">Top</enumerationValue>
+                    <enumerationValue key="bottom">Bottom</enumerationValue>
+                    <enumerationValue key="both">Both</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="iconScrollToBottom" type="icon">
+                <caption>Scroll to bottom icon</caption>
+                <description></description>
+            </property>
+            <!-- <property key="backgroundColorScrollToBottom" type="string" defaultValue="#26ed86">
+                <caption>Background color</caption>
+                <description />
+            </property>
+            <property key="colorScrollToBottom" type="string" defaultValue="#26ed86">
+                <caption>Color</caption>
+                <description />
+            </property> -->
+            <property key="iconScrollToTop" type="icon">
+                <caption>Scroll to top icon</caption>
+                <description></description>
+            </property>
+            <!-- <property key="backgroundColorScrollToTop" type="string" defaultValue="#26ed86">
+                <caption>Background color</caption>
+                <description />
+            </property>
+            <property key="colorScrollToTop" type="string" defaultValue="#26ed86">
+                <caption>Color</caption>
+                <description />
+            </property> -->
+        </propertyGroup>
+        <propertyGroup caption="Paging">
+            <property key="enablePagination" type="boolean" defaultValue="true">
+                <caption>Paginate</caption>
+                <description />
+            </property>
+            <property key="pageSize" type="integer" defaultValue="50">
+                <caption>Page size</caption>
+                <description />
+            </property>
+            <property key="pageEndAction" type="action">
+                <caption>On page end reached</caption>
+                <description>Action to be performed when page end is reached</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
